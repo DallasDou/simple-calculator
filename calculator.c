@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 double add(double a, double b);
-
+double subtract(double a, double b);
 
 void main(){
     double a, b result;
@@ -10,8 +10,8 @@ void main(){
     result = add(a,b);
     printf("Result: %lf\n", result);
 
-
-
+    result = subtract(a,b);
+    printf("Result: %lf\n", result);
 
 
 
@@ -23,4 +23,8 @@ void main(){
 
 double add(double a, double b) {
     return a + b;
+}
+
+double subtract(double a, double b) {
+    return a - b;
 }
