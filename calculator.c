@@ -5,13 +5,16 @@ double subtract(double a, double b);
 double multiply(double a, double b);
 double divide(double a, double b);
 
-void main(){
+int main(){
     double a, b, result;
     int c;
 
     printf("This is a simple calculator program. Please choice an operation:\n1: Add\n2: Subtract\n3: Multiply\n4: Divide\n");
     scanf("%d", &c);
 
+    if (c >= 5 || c<=0){
+        printf("Invalid input. Enter a valid operation (1-4)");
+        return 0;}
     printf("Please enter two numbers: ");
     scanf("%lf %lf", &a, &b);
     
@@ -30,6 +33,8 @@ void main(){
     if (c==4){
     result = divide(a, b);
     printf("Result: %lf", result);}
+    
+    return 0;
 }
 
 double add(double a, double b) {
