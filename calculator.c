@@ -6,23 +6,31 @@ double multiply(double a, double b);
 double divide(double a, double b);
 
 void main(){
-    double a, b result;
+    double a, b, result;
+    int c;
 
-    scanf("%lf %lf\n", &a, &b);
-    result = add(a,b);
-    printf("Result: %lf\n", result);
+    printf("This is a simple calculator program. Please choice an operation:\n1: Add\n2: Subtract\n3: Multiply\n4: Divide\n");
+    scanf("%d", &c);
 
-    result = subtract(a,b);
-    printf("Result: %lf\n", result);
-
-    result = multiply(a,b);
-    printf("Result: %lf\n", result);
-
-    result = divide(a,b);
-    printf("Result: %lf\n", result);
+    printf("Please enter two numbers: ");
+    scanf("%lf %lf", &a, &b);
     
+    if (c==1){
+    result = add(a, b);
+    printf("Result: %lf", result);}
+    
+    if (c==2){
+    result = subtract(a, b);
+    printf("Result: %lf", result);}
+    
+    if (c==3){
+    result = multiply(a, b);
+    printf("Result: %lf", result);}
+    
+    if (c==4){
+    result = divide(a, b);
+    printf("Result: %lf", result);}
 }
-
 
 double add(double a, double b) {
     return a + b;
